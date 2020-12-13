@@ -85,7 +85,7 @@ namespace HomeWork4.Presentation
 				Console.WriteLine("\n\nCongrats you beat the game! ");
 			else
 				Console.WriteLine("\n\nYou died... ");
-			Console.WriteLine("You defeated {0} enemies, {1} of which were summons.", i - TimesRun, (i - TimesRun) - numberOfEnemies);
+			Console.WriteLine("You defeated {0} enemies!", i - TimesRun);
 			if (TimesRun == 0)
 				Console.WriteLine("You never ran, if there was a gold medal for playing the game you would have it!!");
 
