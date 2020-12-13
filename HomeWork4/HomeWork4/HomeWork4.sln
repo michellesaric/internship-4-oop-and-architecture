@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWork4.Domain", "HomeWork4.Domain\HomeWork4.Domain.csproj", "{A083B342-FCE6-45F5-8720-05CC25BB4E4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWork4", "HomeWork4\HomeWork4.csproj", "{06081739-0402-4902-9758-85A5262DE69C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWork4.Data", "HomeWork4.Data\HomeWork4.Data.csproj", "{EE3D766F-D365-465F-8948-42EC63745717}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWork4.Domain", "HomeWork4.Domain\HomeWork4.Domain.csproj", "{A083B342-FCE6-45F5-8720-05CC25BB4E4E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HomeWork4.Presentation", "HomeWork4.Presentation\HomeWork4.Presentation.csproj", "{C27B6C26-5BBD-48C3-9E2F-BA705BFF6FC6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWork4.Data", "HomeWork4.Data\HomeWork4.Data.csproj", "{EE3D766F-D365-465F-8948-42EC63745717}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWork4.Presentation", "HomeWork4.Presentation\HomeWork4.Presentation.csproj", "{C27B6C26-5BBD-48C3-9E2F-BA705BFF6FC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06081739-0402-4902-9758-85A5262DE69C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06081739-0402-4902-9758-85A5262DE69C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06081739-0402-4902-9758-85A5262DE69C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06081739-0402-4902-9758-85A5262DE69C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A083B342-FCE6-45F5-8720-05CC25BB4E4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A083B342-FCE6-45F5-8720-05CC25BB4E4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A083B342-FCE6-45F5-8720-05CC25BB4E4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
