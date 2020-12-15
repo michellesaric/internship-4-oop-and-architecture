@@ -17,11 +17,11 @@ namespace HomeWork4.Data.Models
         }
         public override double DealtDamage(Character hero, List<Character> list, int index)
         {
-
+            var damage = (int)(base.DealtDamage() * Damage);
             Console.Write(CharacterName + " deals ");
             PrintingFunction.DRed("" + (int)(base.DealtDamage() * Damage));
             Console.WriteLine(" damage.");
-            return (int)(base.DealtDamage() * Damage);
+            return damage;
         }
 
         public override void Portrait()

@@ -10,23 +10,24 @@ namespace HomeWork4.Data.Models
 	{
 		public override double DealtDamage()
 		{
+			var damage = (int)(base.DealtDamage() * Damage);
 			Console.WriteLine("Possible attacks:");
 			Console.Write("1 - regular attack\t  2 - Rage attack\nYour choice: ");
 			switch (Choice.ChoosingNumber(1, 2))
 			{
 				case 1:
 					Console.Write("You deal ");
-					PrintingFunction.DRed("" + (int)(base.DealtDamage() * Damage));
+					PrintingFunction.DRed("" + damage);
 					Console.WriteLine(" damage.");
-					return (int)(base.DealtDamage() * Damage);
+					return damage;
 				case 2:
 					ChangeHealthPoints(-0.15 * MaxHealthPoints);
 					Console.Write("You suffer ");
 					PrintingFunction.Red("" + (int)(0.15 * MaxHealthPoints));
 					Console.Write(" and deal ");
-					PrintingFunction.DRed("" + (int)((base.DealtDamage() * 2 * Damage) + 0.15 * MaxHealthPoints));
+					PrintingFunction.DRed("" + (damage * 2) + 0.15 * MaxHealthPoints);
 					Console.WriteLine("damage.");
-					return (int)(base.DealtDamage() * 2 * Damage) + 0.15 * MaxHealthPoints;
+					return (damage * 2) + 0.15 * MaxHealthPoints;
 				default:
 					return 0;
 			}

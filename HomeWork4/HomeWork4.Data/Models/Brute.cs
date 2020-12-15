@@ -9,21 +9,22 @@ namespace HomeWork4.Data.Models
     {
         public override double DealtDamage(Character hero, List<Character> list, int index)
         {
+            var damage = (int)base.DealtDamage() * Damage;
             var random = new Random();
             var percentageDamageChance = random.Next(100);
             if (percentageDamageChance < Level * 5)
             {
                 Console.Write("  Bonus fixed damage!! ");
                 Console.Write(CharacterName + " deals ");
-                PrintingFunction.DRed("" + (int)(base.DealtDamage() * Damage + hero.MaxHealthPoints * 0.25));
+                PrintingFunction.DRed("" + damage + hero.MaxHealthPoints * 0.25);
                 Console.WriteLine(" damage.");
-                return (int)(base.DealtDamage() * Damage + hero.MaxHealthPoints * 0.25);
+                return damage + hero.MaxHealthPoints * 0.25;
             }
 
             Console.Write(CharacterName + " deals ");
-            PrintingFunction.DRed("" + (int)(base.DealtDamage() * Damage));
+            PrintingFunction.DRed("" + damage);
             Console.WriteLine(" damage.");
-            return (int)(base.DealtDamage() * Damage);
+            return damage;
         }
 
         public void ChangeCharacterStatus(int level)

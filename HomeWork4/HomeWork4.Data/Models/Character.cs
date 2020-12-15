@@ -31,7 +31,7 @@ namespace HomeWork4.Data.Models
 			else
 			{
 				Level++;
-				MaxHealthPoints += 5;
+                MaxHealthPoints += 5;
 				Damage += 2;
 				HealthPoints = MaxHealthPoints;
 				var leftoverExperience = (ExperiencePoints + experience) - MaxExperiencePoints;
@@ -71,7 +71,7 @@ namespace HomeWork4.Data.Models
 		virtual public double DealtDamage()
 		{
 			var random = new Random();
-			return (random.NextDouble() / 2 + 0.5);
+			return random.NextDouble() / 2 + 0.5;
 		}
 		virtual public void ChangeCharacterStatus()
 		{

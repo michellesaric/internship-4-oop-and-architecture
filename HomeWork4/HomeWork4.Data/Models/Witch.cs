@@ -35,10 +35,11 @@ namespace HomeWork4.Data.Models
                 PrintingFunction.Yellow("!\n");
                 return 0;
             }
+            var damage = (int)(base.DealtDamage() * Damage);
             Console.Write(CharacterName + " deals ");
-            PrintingFunction.DRed("" + (int)(base.DealtDamage() * Damage));
+            PrintingFunction.DRed("" + damage);
             Console.WriteLine(" damage.");
-            return (int)(base.DealtDamage() * Damage);
+            return damage;
         }
 
         public override void Portrait()

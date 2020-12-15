@@ -15,20 +15,22 @@ namespace HomeWork4.Data.Models
 
 		public override double DealtDamage()
 		{
+			var damage = 0.0;
 			Console.WriteLine("Possible actions:");
 			Console.Write("1 - Attack without using mana\t2 - Attack with mana\t3 - Healing with mana\n Your choice: ");
 			switch (Choice.ChoosingNumber(1, 3))
 			{
 				case 1:
 					Console.Write("You deal ");
-					PrintingFunction.DRed("" + (int)(base.DealtDamage() * Damage));
+					damage = (int)(base.DealtDamage() * Damage);
+					PrintingFunction.DRed("" + damage);
 					Console.WriteLine(" damage.");
-					return (int)(base.DealtDamage() * Damage);
+					return damage;
 				case 2:
 					if (Mana == 0)
 					{
 						Console.WriteLine("You spend the turn gathering mana.");
-						Mana = MaxMana;
+                        Mana = MaxMana;
 						return 0;
 					}
 					Mana--;
@@ -47,7 +49,8 @@ namespace HomeWork4.Data.Models
 					PrintingFunction.Blue("" + Mana);
 					Console.Write(" mana.How much mana do you want to use:");
 					var health = HealthPoints;
-					ChangeHealthPoints((int)(base.DealtDamage() * (10 * Choice.ChoosingNumber(1, Mana))));
+					var heal = (int)(base.DealtDamage() * (10 * Choice.ChoosingNumber(1, Mana)));
+					ChangeHealthPoints(heal);
 					Console.Write("You got healed by ");
 					PrintingFunction.Red("" + (int)(HealthPoints - health));
 					Console.WriteLine(" points.");
@@ -60,7 +63,7 @@ namespace HomeWork4.Data.Models
 		public override void ChangeCharacterStatus()
 		{
 			base.ChangeCharacterStatus();
-			Damage = Damage *= 3;
+			Damage *= 3;
 			Mana = 4;
 			MaxMana = 4;
 		}
